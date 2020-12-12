@@ -1,0 +1,47 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    height: 10vh;
+}
+header {
+    height: 10vh;
+}
+main {
+    flex-grow: 1;
+}
+
+.fighter-icon {
+    transition: all .15s linear;
+
+    border-style: solid;
+    padding: 0 !important;
+    border-color: black;
+
+    min-height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+    
+}
+.fighter-icon:hover {
+    
+    animation: selected .3s linear 0s infinite alternate;
+    border-width: 13px;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+@keyframes selected {
+    
+    0% {border-color: rgb(73, 101, 110)}
+    100% {border-color: blue}
+}
+
+.fighter-name {
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+}
